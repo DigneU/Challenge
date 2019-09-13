@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>TeamWork</title>
+</head>
+<body>
+         <div id="navbar">
+<img  class="imag" src="images/logo.jpg">
+<div class="header-list">
+        <ul>
+         <li>
+           <a href="home.html">HOME</a>
+          </li>
+        </ul>
+</div>
+</div>
+			<div class="text dashboard">
+                <div class="profile">
+                  
+                    <div class="dash">
+                            
+                            <a href="Dashboard.html"><p>DASHBOARD</p></a>      
+                    </div>
+
+                    <div class="dash">
+                            
+                            <a href="articles.html"><p>VIEW ARTICLES</p></a>       
+                    </div>
+
+                    <div class="dash">
+                            
+                            <a href="user.html"><p>ADD ARTICLES</p></a>      
+                    </div>
+
+                    <div class="dash">
+                            
+                            <a href="login.html"><p>LOGOUT</p></a>      
+                    </div>
+
+               
+                
+                </div>  
+            
+        
+        </div>
+    <div class="entr">
+    <h2 class="title">ADD ARTICLE</h2>
+    <form action="userpage.html" method="post" id="addarticle">
+        <input type="text"  placeholder="Add Title" id="title" required><br><br>
+		<textarea cols="0" rows="3" placeholder="Write your article" id="article" required>
+		Write your article
+		</textarea><br><br>
+              <center><div id="button">
+      <button class="save" type="button">Save</button>
+	  <button class="share" type="button">Share</button>
+        <button  class="cance" type="button"onclick="resetForm('addarticle'); return false;">Cancel</button>
+     <div></center>
+
+        </form>   
+
+    </div>
+       <script type="text/javascript">
+   function resetForm(addarticle)
+   {
+       var myForm = document.getElementById(addarticle);
+
+       for (var i = 0; i < myForm.elements.length; i++)
+       {
+           if ('submit' != myForm.elements[i].type && 'reset' != myForm.elements[i].type)
+           {
+               myForm.elements[i].checked = false;
+               myForm.elements[i].value = '';
+               myForm.elements[i].selectedIndex = 0;
+           }
+       }
+   }
+</script>
+         
+</body>
+</html>
